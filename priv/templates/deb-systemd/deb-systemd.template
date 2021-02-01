@@ -16,6 +16,7 @@
              {license_type, "license_type"},
              {license_full_text, ""},
              {bin_or_sbin, "bin"},
+             {package_systemd_after, ""},
 
              %% Platform Specific Settings
              {platform_bin_dir,  "/usr/{{bin_or_sbin}}"},
@@ -36,4 +37,4 @@
 {template, "postrm", "postrm"}.
 {template, "rules", "rules"}.
 {template, "vars.config", "vars.config"}.
-{template, "init.script", "init.script"}.
+{template, "systemd.service", "systemd.service"}.

@@ -1,0 +1,14 @@
+[Unit]
+Description={{package_desc}}
+After={{package_systemd_after}}
+
+[Service]
+ExecStart=/usr/{{bin_or_sbin}}/{{package_install_name}} start
+ExecStop=/usr/{{bin_or_sbin}}/{{package_install_name}} stop
+User={{package_install_user}}
+Group={{package_install_group}}
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
+
